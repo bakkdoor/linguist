@@ -38,6 +38,7 @@ class TestLanguage < Test::Unit::TestCase
     assert_equal Lexer['Dylan'], Language['Dylan'].lexer
     assert_equal Lexer['Erlang'], Language['Erlang'].lexer
     assert_equal Lexer['Factor'], Language['Factor'].lexer
+    assert_equal Lexer['Fancy'], Language['Fancy'].lexer
     assert_equal Lexer['Fortran'], Language['FORTRAN'].lexer
     assert_equal Lexer['GAS'], Language['GAS'].lexer
     assert_equal Lexer['Genshi'], Language['Genshi'].lexer
@@ -152,6 +153,7 @@ class TestLanguage < Test::Unit::TestCase
     assert_equal Language['Diff'], Language.find_by_alias('diff')
     assert_equal Language['Emacs Lisp'], Language.find_by_alias('elisp')
     assert_equal Language['Emacs Lisp'], Language.find_by_alias('emacs-lisp')
+    assert_equal Language['Fancy'], Language.find_by_alias('fancy')
     assert_equal Language['F#'], Language.find_by_alias('f#')
     assert_equal Language['Gettext Catalog'], Language.find_by_alias('pot')
     assert_equal Language['Groovy'], Language.find_by_alias('groovy')
@@ -240,6 +242,7 @@ class TestLanguage < Test::Unit::TestCase
     assert_equal 'cfm',           Language['ColdFusion'].search_term
     assert_equal 'dpatch',        Language['Darcs Patch'].search_term
     assert_equal 'emacs-lisp',    Language['Emacs Lisp'].search_term
+    assert_equal 'fancy',         Language['Fancy'].search_term
     assert_equal 'ocaml',         Language['F#'].search_term
     assert_equal 'gentoo-ebuild', Language['Gentoo Ebuild'].search_term
     assert_equal 'gentoo-eclass', Language['Gentoo Eclass'].search_term
@@ -291,8 +294,10 @@ class TestLanguage < Test::Unit::TestCase
     assert Language['Emacs Lisp'].major?
     assert Language['Erlang'].major?
     assert Language['F#'].major?
+    assert Language['Fancy'].major?
     assert Language['FORTRAN'].major?
     assert Language['Factor'].major?
+    assert Language['Fancy'].major?
     assert Language['Go'].major?
     assert Language['Groovy'].major?
     assert Language['HaXe'].major?
