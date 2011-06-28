@@ -294,7 +294,6 @@ class TestLanguage < Test::Unit::TestCase
     assert Language['Emacs Lisp'].major?
     assert Language['Erlang'].major?
     assert Language['F#'].major?
-    assert Language['Fancy'].major?
     assert Language['FORTRAN'].major?
     assert Language['Factor'].major?
     assert Language['Fancy'].major?
